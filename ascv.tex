@@ -7,126 +7,127 @@
 \usepackage[hidelinks]{hyperref}
 \pagenumbering{gobble}
 \usepackage{amsmath}
+\usepackage{amssymb}
 
+\usepackage{pifont}
+\renewcommand*{\labelitemi}{\ding{228}}
+\renewcommand*{\labelitemii}{$\diamond$}
+\renewcommand*{\labelitemiii}{$\circ$}
+\renewcommand*{\labelitemiv}{$\cdot$}
 
-\newcommand\cvtitle[6]{
+\newcommand\cvtitle{
 	\raggedright
 	% Name
-	\Huge{\textbf{#1}}\\
+	\Huge{\textbf{Albert Stark}}\\
 	\vspace{0.5em}
-		\large{\texttt{\href{#2}{#3}}}
+		\large{\texttt{\href{mailto:albert3@mailfence.com}{albert3@mailfence.com}}}
 		\hfill
-		\large{\texttt{\href{#4}{#5}}}
+		\large{\texttt{\href{https://albert10032.github.io/index.html}{albert10032.github.io}}}
 		\hfill
-		#6
+		Darlington, Sydney, Australia\\
+		\hfill
+		Born in London, United Kingdom
 	\rule{\textwidth}{2pt}
 }
-
-\newcommand\cvexp[5]{
-	\vspace{0.25em}
-	\raggedright
-	\Large{\textbf{#1}}\\
-	\vspace{0.3em}
-	\large{#2 to #3, #4}\\
-	\large{#5}\\	
-}
-
-
-\newcommand\cvedu[6]{
-	\raggedright
-	\Large{\textbf{#1}}\\
-	\vspace{0.25em}
-	\normalsize{\textbf{#2}}\\
-	\large{
-		#3 to #4,  #5\\
-		\normalsize{\textbf{#6}}\\
-	}
-}
-
 
 \newcommand\cvsec[2]{
 	\LARGE{\textbf{#1}}\hspace{2.5pt}\hrulefill\\
 	\large{#2}
-	\thinspace\\
+}
+
+\newcommand\cvexp[5]{
+	\raggedright
+	\Large{\textbf{#1}}\\
+	\vspace{0.1em}
+	\large{#2 to #3, #4}\\
+	\large{#5}
+}
+
+\newcommand\cvedu[6]{
+	\raggedright
+	\Large{\textbf{#1}}\\
+	\normalsize{\textbf{#2}}\\
+	\large{
+		#3 to #4,  #5\\
+		\normalsize{\textbf{#6}}
+	}
 }
 
 \newcommand\cvproj[4]{
 	\Large{\textbf{#1}}\\
 	\large{
 		\texttt{\href{#2}{#3}}\\
-		#4\\
+		#4
 	}
 }
 
 \newcommand\cvprojac[4]{
 	\Large{\textbf{#1}}\\
-	\vspace{0.25em}
 	\large{
 		Supervised by: #2, #3\\
-		#4\\
+		#4
 	}
 }
 
 \newcommand\cvcert[2]{\textbf{#1}: #2}
 
-
-
 \let\svthefootnote\thefootnote
-\newcommand\latestupdate[1]{%
+\newcommand\latestupdate{%
 	\let\thefootnote\relax%
-	\footnotetext{\normalsize{\textit{Date} : #1}}%
+	\footnotetext{\normalsize{\textit{Updated} : \today}}%
 	\let\thefootnote\svthefootnote%
 }
 
 \begin{document}
-	\latestupdate{26 December 2025}
-	\cvtitle{Albert Stark}{mailto:albert3@mailfence.com}{albert3@mailfence.com}{https://albert10032.github.io/index.html}{albert10032.github.io}{Darlington, Sydney, Australia}
+	\latestupdate
+	\cvtitle
 
-
-		%\cvsec{Experience}{
-		%	\cvexp{UWL admin}{Nov 2023}{Dec 2023}{UWL Ealing campus}{dd}
-		%}
-		
-		\cvsec{Education}{
-			\cvedu{University of Sydney}{Bachelor of Science\\ Major: Mathematics, Minor: International Relations}{February 2024}{Present}{Camperdown/Darlington, Sydney, Australia}{Distinction WAM}
-			\cvedu{The Oratory School}{GCSE \& A Levels}{2016}{2023}{Woodcote, Nr Reading, UK}{AAB at A Levels, 9-7 at GCSE}
-		}
-		
-		\cvsec{Projects}{
-			\cvprojac{Better primitive roots modulo $p$}{John Voight}{Sem 1 2026}{An investigation in optimising the algorithms in \texttt{Magma} for finding primitive roots.}
-			\cvproj{Neuronal dynamics and the Connor-Stevens model}{https://github.com/USYD-MATH3888-2025-Group-9/model-implementation}{github.com/USYD-MATH3888-2025-Group-9/model-implementation}{The concluding project for the Mathematics part of my B.Sc, working as a group I and 3 other students were able to demonstrate some interesting behaviour in the Connor-Stevens model for neurons, and characterise the physicality of this behaviour}
-			\cvproj{Factorisation}{https://github.com/Albert10032/factorisation}{github.com/Albert10032/factorisation}{An attempt to implement a general factorisation algorithm}
-		}		
-		
-		\cvsec{Volunteering}{
-			\cvexp{Sydney University Mathematics Society (SUMS)}{Dec 2025}{Present}{USU/USYD}{
+	\cvsec{Experience}{
+		\begin{itemize}
+			\item \cvexp{UWL PESU admin}{Nov 2023}{Dec 2023}{UWL Ealing campus}{A data handling role where I managed the student expenses claims for nursing students on residency around London and Reading}
+		\end{itemize}
+	}\cvsec{Education}{
+		\begin{itemize}
+			\item \cvedu{University of Sydney}{Bachelor of Science\\ Major: Mathematics, Minor: International Relations}{February 2024}{Present}{Camperdown/Darlington, Sydney, Australia}{Distinction WAM}
+			\item \cvedu{The Oratory School}{GCSE \& A Levels}{2016}{2023}{Woodcote, Nr Reading, UK}{AAB at A Levels, 9-7 at GCSE}
+		\end{itemize}
+	}\cvsec{Projects}{
+		\begin{itemize}
+			\item \cvprojac{Better primitive roots modulo $p$}{John Voight}{Sem 1 2026}{An investigation in optimising the algorithms in \texttt{Magma} for finding primitive roots.}
+			\item \cvproj{Neuronal dynamics and the Connor-Stevens model}{https://github.com/USYD-MATH3888-2025-Group-9/model-implementation}{github.com/USYD-MATH3888-2025-Group-9/model-implementation}{The concluding project for the Mathematics part of my B.Sc, working as a group I and 3 other students were able to demonstrate some interesting behaviour in the Connor-Stevens model for neurons, and characterise the physicality of this behaviour}
+			\item \cvproj{Factorisation}{https://github.com/Albert10032/factorisation}{github.com/Albert10032/factorisation}{An attempt to implement a general factorisation algorithm}
+		\end{itemize}
+	}
+	\cvsec{Volunteering}{
+		\begin{itemize}
+			\item \cvexp{Sydney University Mathematics Society (SUMS)}{Dec 2025}{Present}{USU/USYD}{
 				I am a member of the Operations subcommittee, where I help to organise academic events, including the weekly seminar where PhD students, faculty members and guests give talks aimed at first year undergraduate students
 			}
-			\cvexp{USYD Puzzle Society}{April 2024}{Present}{USU/USYD}{
+			\newpage
+			\item \cvexp{USYD Puzzle Society}{April 2024}{Present}{USU/USYD}{
 				I have been involved in running Puzzlesoc since I was in first year, when I joined as a subcommittee member for writing in April 2024. I went on to become editor-in-chief at the start of 2025 and the secretary in April of 2025. I stepped down from editor-in-chief at the end of 2025 and continue in the role of secretary, though I do contribute to puzzles occasionally.
 			}
-			\cvexp{Sydney University Judo Club (SUJC)}{August 2025}{Present}{SUSF/USYD}{
+			\item \cvexp{Sydney University Judo Club (SUJC)}{August 2025}{Present}{SUSF/USYD}{
 				I am a subcommittee member for Judo, and have represented the University at national level events.
 			}
-		}
-		\newpage
-		\cvsec{Certifications}{
-			\textbf{First aid}\\
+		\end{itemize}
+	}
+	\cvsec{Certifications}{
+		\begin{itemize}
+			\item \textbf{First aid}\\
 			\cvcert{HLTAID009}{Provide CPR},
 			\cvcert{HLTAID010}{Provide basic emergency life support},\\
 			\cvcert{HLTAID011}{Provide First Aid}
-		}
-		\cvsec{Skills}{
-			\textbf{Computer skills}\\
-			C/C++, Python, Bash, \texttt{Magma}, SageMath, \LaTeX, Linux, Jupyter notebooks, HTML/CSS\\
-			\textbf{Languages}\\
+		\end{itemize}
+	}
+	\cvsec{Skills}{
+		\begin{itemize}
+			\item \textbf{Computer skills}\\
+			C, C++, Python, Bash, \texttt{Magma}, SageMath, \LaTeX, Linux, Jupyter notebooks, HTML/CSS\\
+			\item\textbf{Languages}\\
 			Japanese ($\approx$N3), Latin (GCSE), Elementary Persian and Chinese
-		}
-		
-		\cvsec{References}{
-			Available upon request
-		}
-
-	
-	
+		\end{itemize}
+	}
+	\cvsec{References}{Available upon request
+	}
 \end{document}
