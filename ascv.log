@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025/VoidLinux)  (format=lualatex 2026.6.16)  31 JUL 2026 18:40
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/VoidLinux)  (format=lualatex 2026.8.7)  20 AUG 2026 14:17
  restricted system commands enabled.
 **ascv.tex
 (./ascv.tex
@@ -398,7 +398,7 @@ Here is how much of LuaTeX's memory you used:
  514 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 8 attribute, 55 glue_spec,
  8 attribute_list, 1 write nodes
-   avail lists: 2:402,3:174,4:40,5:326,6:90,7:5542,8:2,9:316,10:25,11:419
+   avail lists: 2:402,3:174,4:40,5:329,6:90,7:5551,8:2,9:316,10:25,11:422
  31909 multiletter control sequences out of 65536+600000
  76 fonts using 5645167 bytes
  72i,7n,75p,449b,448s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -410,10 +410,10 @@ type/public/lm/lmsans12-regular.otf></usr/share/texmf-dist/fonts/opentype/public
 0-bold.otf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
 r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-d
 ist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on ascv.pdf (2 pages, 44702 bytes).
+Output written on ascv.pdf (2 pages, 44848 bytes).
 
 PDF statistics: 74 PDF objects out of 1000 (max. 8388607)
  48 compressed objects within 1 object stream
- 2 named destinations out of 1000 (max. 131072)
+ 2 named destinations out of 1000 (max. 1048576)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 
